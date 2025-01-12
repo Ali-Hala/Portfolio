@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo">Ali Halabi</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="projects.html" class="navbar__links">Projects</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="index.html#contact" class="navbar__links">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="projects">
+        <div class="projects__container">
+            <h2>My Projects <br><br><br></h2>
+            <div class="project__grid">
+                <div class="project__card">
+                    <h3>Creep Testing Machine</h3>
+                    <img src="../assets/images/chart-190mm1,9kg.bmp" alt="Chart 190mm1,9kg" class="project__img">
+                    <p>During my most recent co-op job, I worked on a project for one of the University of Waterloo's materials science courses. The goal was to improve the process students used to perform creep tests in their lab. Previously, students manually recorded measurements with a ruler and timer, then entered data into Excel to create graphs. This project aimed to streamline and enhance accuracy by developing a machine that automated data collection, plotted results on a computer screen, and saved the data as both an Excel file and a BMP image with a graph.<br><br></p>
+                    <p>I used SolidWorks to design the system's mechanical components, ensuring seamless interaction between the specimen, applied weight, and sensor. The test specimen, typically a 20 cm long piece of solder, is clamped uniaxially at both ends. One end connects to a pulley system via a steel cable, which also links to a draw-wire sensor and the desired test weight. This setup enables precise interaction with the specimen. The draw-wire sensor measures the specimen's elongation and transmits the data to a National Instruments data acquisition device.<br><br></p>
+                    <p>The system's software was programmed in LabVIEW. The computer receives analog voltage signals from the data acquisition device, which the software converts into corresponding displacement values. The user inputs the specimen's initial length, allowing the software to calculate strain and plot strain vs. time in real-time on the screen. Users can then save the data either as an Excel file or as a BMP image displaying the graph.<br><br></p>
+                    
+                </div>
+                <div class="project__card">
+                    <h3>Computer Vision</h3>
+                    <img src="../assets/images/Red_line.png" alt="Computer Vision" class="project__img">
+                    <p>This project was part of my most recent co-op job and aimed to teach third-year mechatronics engineering students how to utilize computer vision with a camera and a Raspberry Pi, as well as how to integrate it with a mobile robot. My contribution involved designing, writing, and testing a program that enabled a robot to detect and follow a red line. The program included features for color detection, turn identification, and drift correction, providing flexibility to work with any specified color. The completed program was intended for professors and teaching assistants, serving as a teaching tool to demonstrate these algorithms to their students effectively.<br><br></p>
+                    <p>The detection code, written in Python, analyzes frames from a webcam to locate a red line and determine navigation adjustments for a robot. It isolates the red line using a color threshold, processes the image to detect edges, and identifies line segments representing the red line's path. The detected line segments are then evaluated based on their angles and positions in the frame to determine if the robot should turn or correct its drift.<br><br></p>
+                    <p>To detect turns, the angles of the line segments are analyzed. Lines with a significant upward slope indicate a left turn, while those with a significant downward slope indicate a right turn. For drift detection, the frame is divided into horizontal quarters, and line segments located entirely in the leftmost or rightmost quarters indicate left or right drift. Based on these evaluations, the code provides directional feedback to guide the robot along the red line.</p>
+                
+                </div>
+                <div class="project__card">
+                    <h3>Ordinary Differential Equation Solver</h3>
+                    <img src="../assets/images/ODE_Integration.png" alt="ODE Solver" class="project__img">
+                    <p>As a part of my first co-op job, I constructed a Python program for researchers to use for modelling structural behaviour using systems of ordinary differential equations (ODE). This program facilitates the analysis of continuous systems by discretizing partial differential equations (PDEs) using the Galerkin method, solving the resulting ordinary differential equation systems, and visualizing the structural vibration behavior. The process begins with the user providing a characteristic equation that defines the system’s resonance frequencies using trigonometric or hyperbolic functions. The program then applies numerical methods, such as Newton-Raphson, to calculate the eigenvalues, which represent the system's natural frequencies.<br><br></p>
+                    <p>With the eigenvalues determined, the program constructs mode shapes based on spatial coordinates and their derivatives, capturing the detailed vibration behavior of the structure. These mode shapes are combined with the eigenvalues to form the Galerkin matrix, which includes stiffness and inertia coefficients for the structural system. Using the Galerkin matrix, the program establishes a system of ODEs that describes how the system's state variables, such as displacements and velocities, evolve over time.<br><br></p>
+                    <p>To solve the ODE system, the program employs numerical integration techniques, like the Runge-Kutta method, to simulate the system's vibrations over a specified time period. It then visualizes the results, providing plots of displacement and vibration behavior for analysis. This comprehensive workflow aids in the design, analysis, and optimization of continuous mechanical structures, offering an intuitive and powerful tool for understanding structural vibration.</p>
+                </div>
+                <div class="project__card">
+                    <h3>Smart Shims Test Rig</h3>
+                    <img src="../assets/images/Smart_Shims.png" alt="Smart Shims Test Rig" class="project__img">
+                    <p>Also as a part of my first co-op job, I worked on an industrial project focused on developing a testing system for smart shims equipped with piezoelectric sensors, primarily used in aircraft for ensuring proper alignment of parts. The system components include a VR 9500 controller, an electrodynamic shaker, and a reaction wall. The reaction wall comprises two plates connected by springs and linear guides, with a digital force gauge positioned behind the plates. Both the force gauge and the electrodynamic shaker are linked to the VR 9500 controller.<br><br></p>
+                    <p>During testing, the smart shim is placed on one of the reaction wall plates, with the electrodynamic shaker in contact with it. The piezoelectric sensors on the shim are connected to an oscilloscope. Operationally, the force gauge measures the force applied to the reaction wall, while the sensors on the shim detect changes in this force. The electrodynamic shaker induces force oscillations onto the reaction wall, which are detected by the sensors and force gauge. The sensor output ideally reflects the derivative of the applied force. The force gauge relays its readings to the VR 9500 controller, which adjusts the applied force to match the user's specifications. Simultaneously, the oscilloscope displays sensor data, enabling researchers to analyze piezoelectric sensor behavior under varying force conditions across different areas of the shim. </p>
+                </div>
+                <div class="project__card">
+                    <h3>Racer Wreck</h3>
+                    <img src="../assets/images/Racer_Wreck.png" alt="Racer Wreck" class="project__img">
+                    <p>"Racer Wreck" is a racing game where players control a car on a track, avoiding collisions with boundaries while competing against a computer-controlled car. The game includes multiple levels, collision detection, level progression, and time tracking, with user interface elements for a seamless player experience. The objective is to complete levels by beating the computer to the finish line, all while striving for faster completion times.<br><br></p>
+                    <p>The game is built using Pygame and begins with initializing the library, setting up the game window, and importing necessary resources like time, math, and visual assets. Scaled images are used to represent game elements such as cars, tracks, and backgrounds, creating an engaging visual environment. Key classes include the Car class, which defines attributes like position, velocity, and rotation for both player and computer-controlled cars, and the Button class, which manages user interactions through clickable interface buttons. A Game Control class oversees level progression, game states, and overall gameplay flow.<br><br></p>
+                    <p>The core game loop handles rendering, user input, and state updates. Player car movements are controlled via WASD keys, and collision detection prevents cars from leaving the track. The game tracks level progression, allowing players to advance by outpacing the computer. Each level's completion time is recorded, encouraging replayability for better performance. Visual feedback and smooth transitions between levels enhance the experience, while buttons allow players to start, quit, or retry levels.<br><br></p>
+                    <p>Various screens provide structure to the game. A Start Screen introduces the game with options to begin or exit, while a Rules Screen explains gameplay instructions. Upon completion, an End Screen shows credits and options for replay or quitting. The game incorporates attractive visuals, responsive controls, and clear interfaces, offering a dynamic and competitive racing experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2025 Ali Halabi. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

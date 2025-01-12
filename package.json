@@ -1,0 +1,16 @@
+{
+  "name": "website-project",
+  "version": "1.0.0",
+  "description": "A simple website project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build script not defined'",
+    "test": "echo 'Test script not defined'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}
